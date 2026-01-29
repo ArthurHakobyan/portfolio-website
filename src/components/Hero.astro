@@ -13,9 +13,10 @@ import heroBg from '../../src/assets/hero-one.jpg'
                 <span class="word">For Business</span>
             </div>
         </h1>
-            <div class="hero-btn">
-                <button class="cta-btn">I WANT WEBSITE</button>
-            </div>
+        
+        <div class="hero-btn">
+            <button class="cta-btn">I WANT WEBSITE</button>
+        </div>
     </div>
 </section>
 
@@ -31,7 +32,6 @@ import heroBg from '../../src/assets/hero-one.jpg'
         padding-top: 30vh;
         padding-left: 10%;
         color: white;
-        font-size: 4rem;
         font-weight: 500;
         letter-spacing: 0.05em;
         width: 70%;
@@ -39,71 +39,28 @@ import heroBg from '../../src/assets/hero-one.jpg'
 
     .word-wrapper {
         position: relative;
+        height: 6rem;
     }
 
     .word {
         color: black;
         background-color: white;
         border-radius: 6.25rem;
-        padding: 0.5rem 1rem;
+        padding: var(--spacing-sm);
         margin-bottom: 1rem;
     }
 
-    .hero-btn {
-        margin-top: 7rem;
-        margin-left: 10%;
-    }
+ 
 
     .cta-btn {
-        padding: 1rem 2rem;
-        font-size: var(--font-size-2xl);
         border-radius: 0;
+        padding: var(--spacing-md);
+        font-size: var(--font-size-base);
         border: none;
         background-color: var(--color-primary);
         color: white;
+        margin-left: 10%;
     }
-
-
-    /* Responsive visibility */
-        @media (max-width: 768px) {
-        .hidden-mobile {
-            display: none;
-        }
-
-       
-  
-        .hero-heading {
-            font-size: var(--font-size-4xl);
-            padding-top: 20vh;
-            width: 100%;
-            letter-spacing: 0.05em;
-        }
-
-        .word-wrapper {
-            margin-top: 1rem;
-        }
-
-
-    .cta-btn {
-        padding: 1rem 1.5rem;
-        font-size: var(--font-size-lg);
-    }
-
-    }
-
-        @media (min-width: 769px) and (max-width: 900px) {
-        .hidden-desktop {
-            display: none;
-        }
-
-        .hero-heading {
-            font-size: 3rem;
-            width: 60%;
-            letter-spacing: 0.05em;
-        }
-
-    }
-
 
 </style>
 

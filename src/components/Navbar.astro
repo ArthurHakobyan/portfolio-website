@@ -1,6 +1,6 @@
 <!-- Navigation -->
 <nav>
-    <ul class="flex gap-lg">
+    <ul>
         <li>
             <a href="">About Me</a>
         </li>
@@ -17,32 +17,24 @@
     nav {
         padding: 1em 2em;
         background-color: white;
-        
     }
      nav ul {
        justify-content: center; 
+       list-style-type: none;
+       display: flex;
+       justify-content: space-around;
+       margin: 0 auto;
 
     }
     nav a {
         font-weight: 500;
-    }
-
-     /* Responsive visibility */
-        @media (max-width: 768px) {
-        .hidden-mobile {
-            display: none;
+        text-decoration: none;
+        color: var(--color-primary);
         }
 
-        a {
-            color: var(--color-primary);
-        }
-  
+    nav a:hover {
+        text-decoration: underline;
     }
 
-        @media (min-width: 769px) {
-        .hidden-desktop {
-            display: none;
-        }
 
-    }
 </style>
