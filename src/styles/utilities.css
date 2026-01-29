@@ -146,15 +146,3 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Responsive visibility */
-@media (max-width: 768px) {
-  .hidden-mobile {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .hidden-desktop {
-    display: none;
-  }
-}

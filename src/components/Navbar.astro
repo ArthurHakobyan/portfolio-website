@@ -1,6 +1,6 @@
 <!-- Navigation -->
 <nav>
-    <ul class="flex gap-md">
+    <ul class="flex gap-lg">
         <li>
             <a href="">About Me</a>
         </li>
@@ -8,13 +8,41 @@
             <a href="">My Works</a>
         </li>
         <li>
-            <a href="">What I like</a>
+            <a href="">Contact</a>
         </li>
     </ul>
 </nav>
 
 <style>
-    a {
+    nav {
+        padding: 1em 2em;
+        background-color: white;
+        
+    }
+     nav ul {
+       justify-content: center; 
+
+    }
+    nav a {
         font-weight: 500;
+    }
+
+     /* Responsive visibility */
+        @media (max-width: 768px) {
+        .hidden-mobile {
+            display: none;
+        }
+
+        a {
+            color: var(--color-primary);
+        }
+  
+    }
+
+        @media (min-width: 769px) {
+        .hidden-desktop {
+            display: none;
+        }
+
     }
 </style>
