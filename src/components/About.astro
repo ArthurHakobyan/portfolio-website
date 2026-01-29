@@ -13,17 +13,68 @@
         background-color: white;
         padding: 7rem;
     }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
     .container {
         background-color: var(--color-bg-info);
         padding: 3rem;
     }
 
+    
+
+    /* Responsive visibility */
+        @media (max-width: 768px) {
+        .hidden-mobile {
+            display: none;
+        }
+
+    .about {
+        padding: 0;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
     h2 {
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 500;
     }
 
     p {
-        font-size: 2rem;
+        font-size: var(--font-size-lg);
+    }
+
+
+    }
+
+        @media (min-width: 769px) and (max-width: 900px) {
+        .hidden-desktop {
+            display: none;
+        }
+
+         .about {
+        background-color: white;
+        padding: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+        p {
+            font-size: var(--font-size-xl);
+        }
+
+        
     }
 </style>
