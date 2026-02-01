@@ -8,10 +8,10 @@ import heroBg from '../../src/assets/hero-one.jpg'
     style={`background-image: url(${heroBg.src})`}
      >
         <h1 class="hero-heading">
-            I Create Custom Websites
-            <div class="word-wrapper">
+            I Create Custom Websites <br/>
+            <span class="word-wrapper">
                 <span class="word">For Business</span>
-            </div>
+            </span>
         </h1>
         
         <div class="hero-btn">
@@ -34,20 +34,21 @@ import heroBg from '../../src/assets/hero-one.jpg'
         color: white;
         font-weight: 500;
         letter-spacing: 0.05em;
-        width: 90%;
     }
 
     .word-wrapper {
-        position: relative;
-        height: 6rem;
+        display: inline-block;
+        overflow: hidden;
     }
+
 
     .word {
         color: black;
         background-color: white;
         border-radius: 6.25rem;
         padding: var(--spacing-sm);
-        margin-bottom: 1rem;
+        display: inline-block;
+        
     }
 
  
@@ -57,6 +58,8 @@ import heroBg from '../../src/assets/hero-one.jpg'
         padding: var(--spacing-md);
         font-size: var(--font-size-base);
         border: none;
+        outline: transparent;
+        font-weight: 600;
         background-color: var(--color-primary);
         color: white;
         margin-left: 10%;
@@ -66,52 +69,23 @@ import heroBg from '../../src/assets/hero-one.jpg'
 </style>
 
 <script>
-   import { gsap } from "gsap"
+    import {gsap} from "gsap"
 
-   const words = ["For Startups", "For Companies", "SEO-Focused", "That Perform", "For Business"];
-   let index = 0;
+    const words = ["For Startups", "For Companies", "SEO-Focused", "That Perform"]
+    const wordEl = document.querySelector('.word')
+    let index = 0;
 
-  window.addEventListener("DOMContentLoaded", () => {
-        const wrapper = document.querySelector(".word-wrapper")!;
-        const currentWord = document.querySelector(".word")!;
-   
+    function changeWord(){
+        //Set the new word
+        wordEl.textContent = words[index]
 
-    if (!wrapper || !currentWord) return;
+        //Animate from top to normal postion
+        gsap.from(".word",{duration: 0.3, y: '-100%', ease: "power1.out"})
 
-    function changeWord() {
-      const nextIndex = (index + 1) % words.length;
-
-      currentWord.textContent = words[nextIndex];
-
-      // Start ABOVE
-      gsap.set(currentWord, {
-        y: "-40%",
-        opacity: 0,
-        position: "absolute",
-        left: 0,
-        top: 0
-      });
-
-      wrapper.appendChild(currentWord);
-
-
-      const tl = gsap.timeline({
-        defaults: { duration: 0.2, ease: "power1.in" }
-      });
-
-      tl.to(currentWord, {
-        y: "120%",
-        opacity: 0
-      })
-      .to(currentWord, {
-        y: "0%",
-        opacity: 1
-      }, "<")
-      .call(() => {
-        index = nextIndex;
-      });
+        //Move to next word 
+        index = (index + 1) % words.length
     }
 
-    setInterval(changeWord, 2200);
-  });
+    setInterval(changeWord, 2000)
+   
 </script>
