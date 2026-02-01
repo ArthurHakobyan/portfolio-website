@@ -30,7 +30,6 @@ import heroBg from '../../src/assets/hero-one.jpg'
     }
 
     .hero-content {
-        border: solid 2px red;
         width: max-content;
         padding-top: 20vh;        
     }
@@ -69,6 +68,13 @@ import heroBg from '../../src/assets/hero-one.jpg'
         background-color: var(--color-primary);
         color: white;
         cursor: pointer;
+    }
+
+
+    @media (min-width: 768px) {
+        .hero-content {
+        padding-left: 7rem;       
+    }
     }
 
 </style>
