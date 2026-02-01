@@ -7,16 +7,17 @@ import heroBg from '../../src/assets/hero-one.jpg'
     class="hero"
     style={`background-image: url(${heroBg.src})`}
      >
-        <h1 class="hero-heading">
-            I Create Custom Websites <br/>
-            <span class="word-wrapper">
-                <span class="word">For Business</span>
-            </span>
-        </h1>
-        
-        <div class="hero-btn">
-            <button class="cta-btn">I WANT WEBSITE</button>
-        </div>
+     <div class="hero-content">
+         <h1 class="hero-heading">
+             I Create Custom Websites <br/>
+             <span class="word-wrapper">
+                 <span class="word">For Business</span>
+             </span>
+         </h1>
+         <div class="hero-btn">
+             <button class="cta-btn">I WANT WEBSITE</button>
+         </div>
+     </div>
     </div>
 </section>
 
@@ -28,9 +29,14 @@ import heroBg from '../../src/assets/hero-one.jpg'
         background-position: center;
     }
 
+    .hero-content {
+        border: solid 2px red;
+        width: max-content;
+        padding-top: 20vh;        
+    }
+
+
     .hero-heading {
-        padding-top: 30vh;
-        padding-left: 10%;
         color: white;
         font-weight: 500;
         letter-spacing: 0.05em;
@@ -56,13 +62,12 @@ import heroBg from '../../src/assets/hero-one.jpg'
     .cta-btn {
         border-radius: 0;
         padding: var(--spacing-md);
-        font-size: var(--font-size-base);
+        font-size: var(--fs-400);
         border: none;
         outline: transparent;
         font-weight: 600;
         background-color: var(--color-primary);
         color: white;
-        margin-left: 10%;
         cursor: pointer;
     }
 
