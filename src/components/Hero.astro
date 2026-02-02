@@ -1,5 +1,5 @@
 ---
-import heroBg from '../../src/assets/hero-one.jpg'
+import heroBg from '../../src/assets/ghy_7.jpg'
 ---
 
 <section>
@@ -91,12 +91,12 @@ import heroBg from '../../src/assets/hero-one.jpg'
         wordEl.textContent = words[index]
 
         //Animate from top to normal postion
-        gsap.from(".word",{duration: 0.3, y: '-100%', ease: "power1.out"})
+        gsap.from(".word",{duration: 0.8, y: '-100%', ease: "bounce"})
 
         //Move to next word 
         index = (index + 1) % words.length
     }
 
-    setInterval(changeWord, 2000)
+    setInterval(changeWord, 1800)
    
 </script>
