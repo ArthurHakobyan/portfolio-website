@@ -1,15 +1,16 @@
-<section class="about" >
+<section class="about-section" >
     <div class="container">
-        <h2>A little about me</h2> 
-        <p>
-            I’m a Front-End Web Developer. I am turning ideas into interactive websites using <strong>HTML, CSS, JavaScript,</strong> and modern frameworks.
+        <h2>Něco málo o mně</h2> 
+        <p class="about-text">
+            Jsem front-end webový vývojář. Přetvářím nápady v interaktivní webové stránky pomocí <strong>HTML, CSS, JavaScriptu</strong> a moderních frameworků. <br/>
+            Ve volném čase miluji kreslit ve <strong>Adobe Fresco</strong> vektorové ilustrace. V galerii se na ně můžete podívat.
         </p>   
     </div>
 </section>
 
 <style>
 
-    .about {
+    .about-section {
         margin: var(--spacing-2xl);
     }
 
@@ -41,3 +42,39 @@
 }
 
 </style>
+
+<script>
+    import {gsap} from "gsap"
+    import {SplitText} from "gsap/src/SplitText"
+    import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+   gsap.registerPlugin(SplitText, ScrollTrigger) 
+
+
+gsap.from('.about-section', {
+	scrollTrigger: '.about-section', // start animation when ".box" enters the viewport
+	xPercent: -100,
+    duration: 1,
+    ease: 'power1.out'
+});
+    
+
+SplitText.create(".about-text", {
+  type: "lines, words",
+  mask: "lines",
+  autoSplit: true,
+  onSplit(self) {
+    return gsap.from(self.words, {
+      scrollTrigger: {          // add ScrollTrigger here too
+        trigger: ".about-section",
+      },
+      duration: 1, 
+      y: 100, 
+      autoAlpha: 0, 
+      stagger: 0.05,
+      ease: "power2.out"
+    });
+  }
+});
+
+</script>

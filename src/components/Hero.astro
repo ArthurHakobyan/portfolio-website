@@ -1,21 +1,21 @@
 ---
-import heroBg from '../../src/assets/24.jpg'
+import heroBg from '../../src/assets/hero-one.jpg'
+
 ---
 
 <section>
     <div 
     class="hero"
-    style={`background-image: url(${heroBg.src})`}
      >
      <div class="hero-content">
          <h1 class="hero-heading">
-             I Create Custom Websites <br/>
+             Tvořím webové stránky na míru. <br/>
              <span class="word-wrapper">
-                 <span class="word">For Business</span>
+                 <span class="word">Pro podniky</span>
              </span>
          </h1>
          <div class="hero-btn">
-             <button class="cta-btn">I WANT WEBSITE</button>
+             <button class="cta-btn">Začněme</button>
          </div>
      </div>
     </div>
@@ -27,6 +27,9 @@ import heroBg from '../../src/assets/24.jpg'
         background-color: var(--color-bg-info);
         background-size: cover;
         background-position: center;
+        background: 
+    linear-gradient(rgba(0,0,0,0.3)), 
+    url('/src/assets/hero-one.jpg') center/cover no-repeat;
     }
 
     .hero-content {
@@ -85,7 +88,7 @@ import heroBg from '../../src/assets/24.jpg'
 <script>
     import {gsap} from "gsap"
 
-    const words = ["For Startups", "For Companies", "SEO-Focused", "That Perform"]
+    const words = ["Pro startupy", "Pro firmy", "Zaměřeno na SEO", "Které fungují"]
     const wordEl = document.querySelector('.word')
     let index = 0;
 
@@ -93,8 +96,10 @@ import heroBg from '../../src/assets/24.jpg'
         //Set the new word
         wordEl.textContent = words[index]
 
+        gsap.ticker.lagSmoothing(0)
+
         //Animate from top to normal postion
-        gsap.from(".word",{duration: 0.8, y: '-100%', ease: "bounce"})
+        gsap.from(".word",{duration: 0.8, yPercent: -100, ease: "bounce"})
 
         //Move to next word 
         index = (index + 1) % words.length

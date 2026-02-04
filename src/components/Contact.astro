@@ -9,14 +9,14 @@ import artur from '../assets/artur.png';
     <div 
     class="form-wrapper" >
         <form class="contact-form">
-            <h2>Contact Me</h2>
+            <h2>Kontaktujte mě</h2>
 
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea rows="4" placeholder="Tell me what's on your mind" required></textarea>
+            <input type="text" placeholder="Jméno" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea rows="4" placeholder="Řekněte Mi, Co Máte Na Mysli" required></textarea>
 
             <button type="submit">
-              Send Message 🚀
+              Odeslat zprávu 🚀
             </button>
         </form>
         <div class="img-wrapper">
@@ -31,7 +31,7 @@ import artur from '../assets/artur.png';
   .form-wrapper {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-bg-purple);
+    background-color: var(--color-bg-article);
   }
 
   .img-wrapper {
@@ -49,7 +49,6 @@ import artur from '../assets/artur.png';
 
     .contact-form {
     padding: 3rem 2rem;
-    border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     font-family: 'Futura Cyrillic' ;
     font-size: var(--fs-400);
@@ -68,22 +67,21 @@ import artur from '../assets/artur.png';
     padding: 10px;
     margin: 8px 0;
     border: 1px solid #ddd;
-    border-radius: 6px;
     font-family: 'Futura Cyrillic' ;
     font-size: var(--fs-400);
   }
 
   .contact-form button {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: transparent;
+    color: var(--color-primary);
+    border: 0.15rem solid var(--color-primary);
     cursor: pointer;
     font-family: 'Futura Cyrillic' ;
     font-size: var(--fs-400);
+    font-weight: 500;
 
   }
 

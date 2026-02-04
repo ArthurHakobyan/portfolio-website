@@ -1,0 +1,67 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; {year} Your Name. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#about">About </a>
+      <a href="#works">Works</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: white;
+    color: black;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a::after {
+  box-sizing:border-box;
+  display:inline-block;
+  width:0.3em;
+  height:0.3em;
+  margin-left:0.1em;
+  content:'';
+  border-style:solid;
+  border-width:0.09em 0.09em 0 0;
+  transform:rotate(50deg) skew(10deg) translateY(-50%)
+}
+
+  .footer-links a:hover {
+    color: var(--color-primary); /* accent color on hover */
+  }
+
+  @media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  }
+</style>
